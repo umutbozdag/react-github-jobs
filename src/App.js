@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './Nav';
-import About from './About';
-import Jobs from './Jobs';
-import JobDetail from './JobDetail';
-import NotFound from './NotFound';
-import Home from './Home';
+import Nav from './Components/Nav';
+import About from './Components/About';
+import Jobs from './Components/Jobs';
+import JobDetail from './Components/JobDetail';
+import NotFound from './Components/NotFound';
+import Home from './Components/Home';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Switch>
           <Route exact path="/jobs" component={Jobs}></Route>
           <Route path="/about" component={About}></Route>
-          <Route path="/jobs/:jobId" component={JobDetail}></Route>
+          <Route exact path="/jobs/:jobId" component={JobDetail}></Route>
           <Route exact path="/" component={Home}></Route>
           <Route path="/" component={NotFound}></Route>
         </Switch>

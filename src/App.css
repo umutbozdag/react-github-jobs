@@ -1,11 +1,142 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
-ul {
-  display: flex;
-  justify-content: space-around;
+
+
+::selection {
+  color: yellow;
+  background: black;
 }
 
 li {
   list-style: none;
+}
+
+.Home {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-detail {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.spinner {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  width: 256px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.card-img-top {
+  height: 130px;
+  display: flex;
+  object-fit: contain;
+}
+
+.NotFound {
+  text-align: center;
+}
+
+.JobDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.card-tags {
+  display: flex;
+}
+
+.card-tag:first-child {
+  margin-right: 12px;
+}
+
+.home-text {
+  text-align: right;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+
+@media (max-width:600px) {
+  .home-img {
+    display: none;
+  }
+
+  .home-text {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .not-found-img {
+    display: none;
+  }
+
+  .home-title {
+    font-size: 48px;
+  }
+
+  .card-body {
+    flex-wrap: wrap;
+  }
+
+  .card-image {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .img-holder {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+
+
+  details p {
+    font-size: 12px;
+  }
 }
